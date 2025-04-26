@@ -361,9 +361,6 @@ public class DiscordHtmlTranscripts {
                 .sorted(Comparator.comparing(ISnowflake::getTimeCreated))
                 .toList()) {
 
-            if (message.getAuthor().isBot()) {
-                continue;
-            }
             // create message group
             Element messageGroup = document.createElement("div");
             messageGroup.addClass("chatlog__message-group");
